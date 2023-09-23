@@ -74,6 +74,7 @@
     .secao__cartoes{
         --gap-coluna:1.5rem;
     }
+    
     .secao-horizontal .cartao__titulo {
         font: 700 16px/22px 'Open Sans', sans-serif;
     }
@@ -103,4 +104,6 @@
     .navbar {
         display: none;
     }
+
+    
 }

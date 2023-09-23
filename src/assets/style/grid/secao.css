@@ -15,20 +15,19 @@
 .secao__cartoes{
     display:grid;
     row-gap:1rem;
-    --gap-coluna:1.25rem;
+    --gap-coluna: 1.25rem;
     column-gap: var(--gap-coluna);
-    
-    --gap-proporcional: var(--gap-coluna) * (var(--quantidade-maxima-de-colunas) - 1);
-    
-    --gap-proporc: var(--gap-proporcional) / var(--quantidade-maxima-de-colunas);
+
+    --gap-proporcional: var(--gap-coluna) * (var(--quantidade-maxima-de-colunas) - 1) / var(--quantidade-maxima-de-colunas);
+   
     /*Largura minima da coluna*/
-    --largura-minima-da-coluna:100%/2 - var(--gap-proporc);
+    --largura-minima-da-coluna:100%/2 - var(--gap-proporcional);
     
     /*Largura maxima da coluna*/
     --max-largura-maxima-da-coluna:100%/var(--quantidade-maxima-de-colunas);
-    --largura-maxima-da-coluna: max(var(--min-largura-maxima-da-coluna), var(--max-largura-maxima-da-coluna) - var(--gap-proporc)); 
+    --largura-maxima-da-coluna: max(var(--min-largura-maxima-da-coluna), var(--max-largura-maxima-da-coluna) - var(--gap-proporcional)); 
 
-     --minimo: min(var(--largura-minima-da-coluna), var(--largura-maxima-da-coluna));
+    --minimo: min(var(--largura-minima-da-coluna), var(--largura-maxima-da-coluna));
     
      grid-template-columns: repeat(auto-fit, minmax(var(--minimo),1fr));
 }
